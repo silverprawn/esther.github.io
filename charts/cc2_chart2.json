@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Average wage",
+           "text": "China's average urban wage is 13 times higher than in 2000",
     "anchor": "start",
-    "subtitle": "Urban only, CNY | NBS through ECO API",
+           "subtitle": "Average annual wage, urban workers, nominal CNY | Source: NBS via ECO API",
     "fontSize": "14",
     "subtitleFontSize": "12",
     "color": "#000000",
