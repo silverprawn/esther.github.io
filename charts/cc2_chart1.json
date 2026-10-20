@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Job Vacancies",
+           "text": "UK job vacancies surged after Covid, then fell back",
     "anchor": "start",
     "subtitle": "Total vacancies, 000's | Source: ONS through ECO API",
     "fontSize": "14",
@@ -28,7 +28,7 @@
   },
   "mark": {
     "type": "line",
-    "color": "#15f43a",
+           "color": "#1b7837",
     "strokeWidth": "2"
   },
   "encoding": {
