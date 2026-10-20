@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Malaysia's income inequality, 1970-2024",
+    "subtitle": [
+      "Gini coefficient of household gross income: 0 = everyone earns the same, 1 = one household earns everything.",
+      "Source: DOSM Household Income Survey, via OpenDOSM"
+    ],
+    "anchor": "start",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "subtitleColor": "#444444"
+  },
+  "width": 420,
+  "height": 280,
+  "data": {
+    "url": "https://raw.githubusercontent.com/silverprawn/silverprawn.github.io/main/hh_inequality.csv"
+  },
+  "mark": {"type": "line", "color": "#c8102e", "strokeWidth": 2, "point": {"color": "#c8102e", "size": 30}},
+  "encoding": {
+    "x": {"field": "date", "type": "temporal", "title": null, "axis": {"grid": false, "format": "%Y"}},
+    "y": {"field": "gini", "type": "quantitative", "title": null,
+          "scale": {"zero": false}, "axis": {"format": ".2f"}},
+    "tooltip": [
+      {"field": "date", "type": "temporal", "format": "%Y", "title": "Year"},
+      {"field": "gini", "type": "quantitative", "format": ".3f", "title": "Gini"}
+    ]
+  }
+}

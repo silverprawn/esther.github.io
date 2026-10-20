@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "In 8 of 16 states, the typical household earns less than the national B40 ceiling",
+    "subtitle": [
+      "Median gross monthly household income by state, 2024 (RM). Dashed line = B40 ceiling (RM5,860):",
+      "B40 = the bottom 40% of Malaysian households by income, the group used to target government cash aid.",
+      "Source: DOSM Household Income Survey 2024, via OpenDOSM"
+    ],
+    "anchor": "start",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "subtitleColor": "#444444"
+  },
+  "width": 420,
+  "height": 380,
+  "data": {
+    "url": "https://raw.githubusercontent.com/silverprawn/silverprawn.github.io/main/hh_income_state.csv",
+    "format": {"type": "csv", "parse": {"date": "string"}}
+  },
+  "transform": [
+    {"filter": "datum.date == '2024-01-01'"},
+    {"calculate": "datum.income_median < 5860 ? 'Below B40 ceiling' : 'Above B40 ceiling'", "as": "group"}
+  ],
+  "layer": [
+    {
+      "mark": {"type": "bar"},
+      "encoding": {
+        "y": {"field": "state", "type": "nominal", "sort": "-x", "title": null},
+        "x": {"field": "income_median", "type": "quantitative",
+              "title": "Median monthly household income (RM)",
+              "axis": {"grid": false}},
+        "color": {"field": "group", "type": "nominal",
+                  "scale": {"domain": ["Below B40 ceiling", "Above B40 ceiling"],
+                            "range": ["#c8102e", "#9aa5b1"]},
+                  "legend": {"title": null, "orient": "bottom"}},
+        "tooltip": [
+          {"field": "state", "title": "State"},
+          {"field": "income_median", "title": "Median income (RM)", "format": ","}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "rule", "color": "#222222", "strokeDash": [4, 4], "size": 1.5},
+      "encoding": {"x": {"datum": 5860}}
+    },
+    {
+      "mark": {"type": "text", "align": "left", "dx": 4, "dy": -6, "fontSize": 11, "color": "#222222"},
+      "encoding": {"x": {"datum": 5860}, "y": {"value": 0}, "text": {"value": "B40 ceiling: RM5,860"}}
+    }
+  ]
+}
