@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Malaysia's income inequality, 1970-2024",
+    "text": "Malaysia’s income inequality has fallen to its lowest level on record",
     "subtitle": [
       "Gini coefficient of household gross income: 0 = everyone earns the same, 1 = one household earns everything.",
       "Source: DOSM Household Income Survey, via OpenDOSM"
