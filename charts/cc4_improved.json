@@ -1,19 +1,20 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
- "description": "Improved version: inflation by main group, January 2025 vs December 2024, Malaysia",
+ "description": "Improved version of DOSM Chart 3",
  "title": {
-       "text": "Restaurants and hotels had the highest inflation; information and communication prices fell",
+  "text": "Core inflation is rising even as headline inflation stays low",
   "subtitle": [
-   "Inflation by main spending group, January 2025 (bars) and December 2024 (black ticks). % change on a year earlier.",
-   "Dashed line = headline inflation (1.7%). Source: Department of Statistics Malaysia, Consumer Price Index, January 2025"
+   "Annual inflation, Malaysia, October 2024 to October 2025 (% change on a year earlier).",
+   "Core excludes the most volatile items (e.g. fresh food) and government-set prices.",
+   "Source: Department of Statistics Malaysia, Consumer Price Index, October 2025"
   ],
   "anchor": "start",
   "fontSize": 15,
   "subtitleFontSize": 11,
   "subtitleColor": "#555"
  },
- "width": 480,
- "height": 360,
+ "width": 440,
+ "height": 260,
  "config": {
   "view": {
    "stroke": null
@@ -25,259 +26,423 @@
  "data": {
   "values": [
    {
-    "group": "Food & beverages",
-    "dec": 2.7,
-    "jan": 2.5
+    "month": "2024-10-01",
+    "series": "Headline Inflation",
+    "value": 1.9,
+    "label": "Headline",
+    "last": false
    },
    {
-    "group": "Alcohol & tobacco",
-    "dec": 0.8,
-    "jan": 0.9
+    "month": "2024-10-01",
+    "series": "Core Inflation",
+    "value": 1.8,
+    "label": "Core",
+    "last": false
    },
    {
-    "group": "Clothing & footwear",
-    "dec": -0.5,
-    "jan": -0.3
+    "month": "2024-10-01",
+    "series": "Inflation without Fuel",
+    "value": 1.9,
+    "label": "Excluding fuel",
+    "last": false
    },
    {
-    "group": "Housing & utilities",
-    "dec": 3.2,
-    "jan": 2.8
+    "month": "2024-11-01",
+    "series": "Headline Inflation",
+    "value": 1.8,
+    "label": "Headline",
+    "last": false
    },
    {
-    "group": "Furnishings & household",
-    "dec": 0.4,
-    "jan": 0.5
+    "month": "2024-11-01",
+    "series": "Core Inflation",
+    "value": 1.8,
+    "label": "Core",
+    "last": false
    },
    {
-    "group": "Health",
-    "dec": 1.1,
-    "jan": 1.2
+    "month": "2024-11-01",
+    "series": "Inflation without Fuel",
+    "value": 1.9,
+    "label": "Excluding fuel",
+    "last": false
    },
    {
-    "group": "Transport",
-    "dec": 0.4,
-    "jan": 0.9
+    "month": "2024-12-01",
+    "series": "Headline Inflation",
+    "value": 1.7,
+    "label": "Headline",
+    "last": false
    },
    {
-    "group": "Information & communication",
-    "dec": -5.4,
-    "jan": -5.3
+    "month": "2024-12-01",
+    "series": "Core Inflation",
+    "value": 1.6,
+    "label": "Core",
+    "last": false
    },
    {
-    "group": "Recreation & culture",
-    "dec": 1.7,
-    "jan": 1.8
+    "month": "2024-12-01",
+    "series": "Inflation without Fuel",
+    "value": 1.7,
+    "label": "Excluding fuel",
+    "last": false
    },
    {
-    "group": "Education",
-    "dec": 1.5,
-    "jan": 1.6
+    "month": "2025-01-01",
+    "series": "Headline Inflation",
+    "value": 1.7,
+    "label": "Headline",
+    "last": false
    },
    {
-    "group": "Restaurants & hotels",
-    "dec": 2.9,
-    "jan": 3.5
+    "month": "2025-01-01",
+    "series": "Core Inflation",
+    "value": 1.8,
+    "label": "Core",
+    "last": false
    },
    {
-    "group": "Insurance & financial",
-    "dec": 0.5,
-    "jan": 0.6
+    "month": "2025-01-01",
+    "series": "Inflation without Fuel",
+    "value": 1.8,
+    "label": "Excluding fuel",
+    "last": false
    },
    {
-    "group": "Personal care & other",
-    "dec": 3.2,
-    "jan": 3.3
+    "month": "2025-02-01",
+    "series": "Headline Inflation",
+    "value": 1.5,
+    "label": "Headline",
+    "last": false
+   },
+   {
+    "month": "2025-02-01",
+    "series": "Core Inflation",
+    "value": 1.9,
+    "label": "Core",
+    "last": false
+   },
+   {
+    "month": "2025-02-01",
+    "series": "Inflation without Fuel",
+    "value": 1.6,
+    "label": "Excluding fuel",
+    "last": false
+   },
+   {
+    "month": "2025-03-01",
+    "series": "Headline Inflation",
+    "value": 1.4,
+    "label": "Headline",
+    "last": false
+   },
+   {
+    "month": "2025-03-01",
+    "series": "Core Inflation",
+    "value": 1.9,
+    "label": "Core",
+    "last": false
+   },
+   {
+    "month": "2025-03-01",
+    "series": "Inflation without Fuel",
+    "value": 1.5,
+    "label": "Excluding fuel",
+    "last": false
+   },
+   {
+    "month": "2025-04-01",
+    "series": "Headline Inflation",
+    "value": 1.4,
+    "label": "Headline",
+    "last": false
+   },
+   {
+    "month": "2025-04-01",
+    "series": "Core Inflation",
+    "value": 2.0,
+    "label": "Core",
+    "last": false
+   },
+   {
+    "month": "2025-04-01",
+    "series": "Inflation without Fuel",
+    "value": 1.5,
+    "label": "Excluding fuel",
+    "last": false
+   },
+   {
+    "month": "2025-05-01",
+    "series": "Headline Inflation",
+    "value": 1.2,
+    "label": "Headline",
+    "last": false
+   },
+   {
+    "month": "2025-05-01",
+    "series": "Core Inflation",
+    "value": 1.8,
+    "label": "Core",
+    "last": false
+   },
+   {
+    "month": "2025-05-01",
+    "series": "Inflation without Fuel",
+    "value": 1.4,
+    "label": "Excluding fuel",
+    "last": false
+   },
+   {
+    "month": "2025-06-01",
+    "series": "Headline Inflation",
+    "value": 1.1,
+    "label": "Headline",
+    "last": false
+   },
+   {
+    "month": "2025-06-01",
+    "series": "Core Inflation",
+    "value": 1.8,
+    "label": "Core",
+    "last": false
+   },
+   {
+    "month": "2025-06-01",
+    "series": "Inflation without Fuel",
+    "value": 1.3,
+    "label": "Excluding fuel",
+    "last": false
+   },
+   {
+    "month": "2025-07-01",
+    "series": "Headline Inflation",
+    "value": 1.2,
+    "label": "Headline",
+    "last": false
+   },
+   {
+    "month": "2025-07-01",
+    "series": "Core Inflation",
+    "value": 1.8,
+    "label": "Core",
+    "last": false
+   },
+   {
+    "month": "2025-07-01",
+    "series": "Inflation without Fuel",
+    "value": 1.3,
+    "label": "Excluding fuel",
+    "last": false
+   },
+   {
+    "month": "2025-08-01",
+    "series": "Headline Inflation",
+    "value": 1.3,
+    "label": "Headline",
+    "last": false
+   },
+   {
+    "month": "2025-08-01",
+    "series": "Core Inflation",
+    "value": 2.0,
+    "label": "Core",
+    "last": false
+   },
+   {
+    "month": "2025-08-01",
+    "series": "Inflation without Fuel",
+    "value": 1.4,
+    "label": "Excluding fuel",
+    "last": false
+   },
+   {
+    "month": "2025-09-01",
+    "series": "Headline Inflation",
+    "value": 1.5,
+    "label": "Headline",
+    "last": false
+   },
+   {
+    "month": "2025-09-01",
+    "series": "Core Inflation",
+    "value": 2.1,
+    "label": "Core",
+    "last": false
+   },
+   {
+    "month": "2025-09-01",
+    "series": "Inflation without Fuel",
+    "value": 1.6,
+    "label": "Excluding fuel",
+    "last": false
+   },
+   {
+    "month": "2025-10-01",
+    "series": "Headline Inflation",
+    "value": 1.3,
+    "label": "Headline",
+    "last": true
+   },
+   {
+    "month": "2025-10-01",
+    "series": "Core Inflation",
+    "value": 2.2,
+    "label": "Core",
+    "last": true
+   },
+   {
+    "month": "2025-10-01",
+    "series": "Inflation without Fuel",
+    "value": 1.5,
+    "label": "Excluding fuel",
+    "last": true
    }
   ]
  },
- "transform": [
-  {
-   "calculate": "datum.jan >= 1.7 ? 'Above headline' : 'Below headline'",
-   "as": "band"
-  },
-  {
-   "calculate": "datum.jan >= 0 ? max(datum.jan, datum.dec) : min(datum.jan, datum.dec)",
-   "as": "labx"
-  }
- ],
  "encoding": {
-  "y": {
-   "field": "group",
-   "type": "nominal",
-   "sort": {
-    "field": "jan",
-    "op": "max",
-    "order": "descending"
-   },
+  "x": {
+   "field": "month",
+   "type": "temporal",
    "title": null,
    "axis": {
-    "ticks": false,
-    "domain": false
+    "format": "%b %Y",
+    "tickCount": {
+     "interval": "month",
+     "step": 3
+    },
+    "grid": false,
+    "labelAngle": 0
    }
+  },
+  "y": {
+   "field": "value",
+   "type": "quantitative",
+   "title": null,
+   "scale": {
+    "domain": [
+     0,
+     2.5
+    ]
+   },
+   "axis": {
+    "values": [
+     0,
+     0.5,
+     1,
+     1.5,
+     2,
+     2.5
+    ],
+    "format": ".1f",
+    "labelExpr": "datum.value == 2.5 ? datum.label + '%' : datum.label",
+    "domain": false,
+    "ticks": false,
+    "gridColor": "#e5e5e5"
+   }
+  },
+  "color": {
+   "field": "label",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "Core",
+     "Excluding fuel",
+     "Headline"
+    ],
+    "range": [
+     "#c0392b",
+     "#7f8c8d",
+     "#1f4e9c"
+    ]
+   },
+   "legend": null
   }
  },
  "layer": [
   {
    "mark": {
-    "type": "bar",
-    "height": {
-     "band": 0.7
-    }
+    "type": "line",
+    "strokeWidth": 2.5
    },
    "encoding": {
-    "x": {
-     "field": "jan",
-     "type": "quantitative",
-     "title": "% change on a year earlier",
-     "scale": {
-      "domain": [
-       -7,
-       4
-      ]
-     },
-     "axis": {
-      "grid": false,
-      "format": ".0f"
-     }
-    },
-    "color": {
-     "field": "band",
+    "strokeDash": {
+     "field": "label",
      "type": "nominal",
      "scale": {
       "domain": [
-       "Above headline",
-       "Below headline"
+       "Core",
+       "Excluding fuel",
+       "Headline"
       ],
       "range": [
-       "#2b3590",
-       "#a9b0d6"
+       [
+        1,
+        0
+       ],
+       [
+        5,
+        3
+       ],
+       [
+        1,
+        0
+       ]
       ]
      },
      "legend": null
     },
     "tooltip": [
      {
-      "field": "group",
-      "title": "Group"
+      "field": "label",
+      "title": "Measure"
      },
      {
-      "field": "jan",
-      "title": "Jan 2025 (%)"
+      "field": "month",
+      "type": "temporal",
+      "format": "%b %Y",
+      "title": "Month"
      },
      {
-      "field": "dec",
-      "title": "Dec 2024 (%)"
+      "field": "value",
+      "format": ".1f",
+      "title": "Inflation (%)"
      }
     ]
    }
   },
   {
-   "mark": {
-    "type": "tick",
-    "color": "black",
-    "thickness": 2,
-    "bandSize": 14
-   },
-   "encoding": {
-    "x": {
-     "field": "dec",
-     "type": "quantitative"
+   "transform": [
+    {
+     "filter": "datum.last"
     }
+   ],
+   "mark": {
+    "type": "circle",
+    "size": 50
    }
   },
   {
+   "transform": [
+    {
+     "filter": "datum.last"
+    },
+    {
+     "calculate": "datum.label + ' ' + format(datum.value,'.1f') + '%'",
+     "as": "endlab"
+    }
+   ],
    "mark": {
     "type": "text",
     "align": "left",
-    "dx": 6,
-    "fontSize": 10,
-    "color": "#222"
+    "dx": 8,
+    "fontSize": 12,
+    "fontWeight": "bold"
    },
-   "transform": [
-    {
-     "filter": "datum.jan >= 0"
-    }
-   ],
    "encoding": {
-    "x": {
-     "field": "labx",
-     "type": "quantitative"
-    },
     "text": {
-     "field": "jan",
-     "type": "quantitative",
-     "format": ".1f"
+     "field": "endlab"
     }
-   }
-  },
-  {
-   "mark": {
-    "type": "text",
-    "align": "right",
-    "dx": -6,
-    "fontSize": 10,
-    "color": "#222"
-   },
-   "transform": [
-    {
-     "filter": "datum.jan < 0"
-    }
-   ],
-   "encoding": {
-    "x": {
-     "field": "labx",
-     "type": "quantitative"
-    },
-    "text": {
-     "field": "jan",
-     "type": "quantitative",
-     "format": ".1f"
-    }
-   }
-  },
-  {
-   "data": {
-    "values": [
-     {
-      "h": 1.7
-     }
-    ]
-   },
-   "mark": {
-    "type": "rule",
-    "strokeDash": [
-     4,
-     3
-    ],
-    "color": "#7a1f4c"
-   },
-   "encoding": {
-    "x": {
-     "field": "h",
-     "type": "quantitative"
-    },
-    "y": null
-   }
-  },
-  {
-   "data": {
-    "values": [
-     {
-      "z": 0
-     }
-    ]
-   },
-   "mark": {
-    "type": "rule",
-    "color": "#444"
-   },
-   "encoding": {
-    "x": {
-     "field": "z",
-     "type": "quantitative"
-    },
-    "y": null
    }
   }
  ]

@@ -1,799 +1,470 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
- "description": "Replica of DOSM's 'Inflation by main group' infographic panel, Consumer Price Index January 2025",
- "width": 760,
- "height": 400,
- "background": "#f4f2f8",
+ "description": "Replica of DOSM Chart 3: Malaysia inflation, core inflation and inflation without fuel, Oct 2024 - Oct 2025",
+ "background": "white",
  "config": {
   "view": {
    "stroke": null
   },
-  "font": "Poppins, Arial, sans-serif"
- },
- "data": {
-  "values": [
-   {
-    "label": "Food &\nBeverages",
-    "group": "Food & beverages",
-    "dec": 2.7,
-    "jan": 2.5,
-    "col": 0,
-    "row": 0,
-    "dec_t": "2.7%",
-    "jan_t": "2.5%"
-   },
-   {
-    "label": "Alcoholic\nBeverages\n& Tobacco",
-    "group": "Alcohol & tobacco",
-    "dec": 0.8,
-    "jan": 0.9,
-    "col": 1,
-    "row": 0,
-    "dec_t": "0.8%",
-    "jan_t": "0.9%"
-   },
-   {
-    "label": "Clothing\n& Footwear",
-    "group": "Clothing & footwear",
-    "dec": -0.5,
-    "jan": -0.3,
-    "col": 2,
-    "row": 0,
-    "dec_t": "-0.5%",
-    "jan_t": "-0.3%"
-   },
-   {
-    "label": "Housing, Water,\nElectricity, Gas\n& Other Fuels",
-    "group": "Housing & utilities",
-    "dec": 3.2,
-    "jan": 2.8,
-    "col": 3,
-    "row": 0,
-    "dec_t": "3.2%",
-    "jan_t": "2.8%"
-   },
-   {
-    "label": "Furnishings,\nHousehold Equipment\n& Routine Household\nMaintenance",
-    "group": "Furnishings & household",
-    "dec": 0.4,
-    "jan": 0.5,
-    "col": 4,
-    "row": 0,
-    "dec_t": "0.4%",
-    "jan_t": "0.5%"
-   },
-   {
-    "label": "Health",
-    "group": "Health",
-    "dec": 1.1,
-    "jan": 1.2,
-    "col": 5,
-    "row": 0,
-    "dec_t": "1.1%",
-    "jan_t": "1.2%"
-   },
-   {
-    "label": "Transport",
-    "group": "Transport",
-    "dec": 0.4,
-    "jan": 0.9,
-    "col": 6,
-    "row": 0,
-    "dec_t": "0.4%",
-    "jan_t": "0.9%"
-   },
-   {
-    "label": "Information &\nCommunication",
-    "group": "Information & communication",
-    "dec": -5.4,
-    "jan": -5.3,
-    "col": 0.5,
-    "row": 1,
-    "dec_t": "-5.4%",
-    "jan_t": "-5.3%"
-   },
-   {
-    "label": "Recreation, Sport\n& Culture",
-    "group": "Recreation & culture",
-    "dec": 1.7,
-    "jan": 1.8,
-    "col": 1.5,
-    "row": 1,
-    "dec_t": "1.7%",
-    "jan_t": "1.8%"
-   },
-   {
-    "label": "Education",
-    "group": "Education",
-    "dec": 1.5,
-    "jan": 1.6,
-    "col": 2.5,
-    "row": 1,
-    "dec_t": "1.5%",
-    "jan_t": "1.6%"
-   },
-   {
-    "label": "Restaurant &\nAccommodation\nServices",
-    "group": "Restaurants & hotels",
-    "dec": 2.9,
-    "jan": 3.5,
-    "col": 3.5,
-    "row": 1,
-    "dec_t": "2.9%",
-    "jan_t": "3.5%"
-   },
-   {
-    "label": "Insurance &\nFinancial Services",
-    "group": "Insurance & financial",
-    "dec": 0.5,
-    "jan": 0.6,
-    "col": 4.5,
-    "row": 1,
-    "dec_t": "0.5%",
-    "jan_t": "0.6%"
-   },
-   {
-    "label": "Personal Care,\nSocial Protection &\nMiscellaneous Goods\n& Services",
-    "group": "Personal care & other",
-    "dec": 3.2,
-    "jan": 3.3,
-    "col": 5.5,
-    "row": 1,
-    "dec_t": "3.2%",
-    "jan_t": "3.3%"
-   }
-  ]
- },
- "transform": [
-  {
-   "calculate": "datum.col+0.04",
-   "as": "tx1"
-  },
-  {
-   "calculate": "datum.col+0.96",
-   "as": "tx2"
-  },
-  {
-   "calculate": "datum.row+0.03",
-   "as": "ty1"
-  },
-  {
-   "calculate": "datum.row+0.95",
-   "as": "ty2"
-  },
-  {
-   "calculate": "datum.col+0.5",
-   "as": "cx"
-  },
-  {
-   "calculate": "datum.row+0.17",
-   "as": "iy"
-  },
-  {
-   "calculate": "datum.row+0.49",
-   "as": "ly"
-  },
-  {
-   "calculate": "datum.col+0.09",
-   "as": "dx1"
-  },
-  {
-   "calculate": "datum.col+0.49",
-   "as": "dx2"
-  },
-  {
-   "calculate": "datum.col+0.51",
-   "as": "jx1"
-  },
-  {
-   "calculate": "datum.col+0.91",
-   "as": "jx2"
-  },
-  {
-   "calculate": "datum.row+0.76",
-   "as": "by1"
-  },
-  {
-   "calculate": "datum.row+0.91",
-   "as": "by2"
-  },
-  {
-   "calculate": "datum.col+0.29",
-   "as": "dxc"
-  },
-  {
-   "calculate": "datum.col+0.71",
-   "as": "jxc"
-  },
-  {
-   "calculate": "datum.row+0.835",
-   "as": "byc"
+  "concat": {
+   "spacing": 0
   }
- ],
- "layer": [
+ },
+ "vconcat": [
   {
+   "width": 460,
+   "height": 70,
+   "view": {
+    "fill": "#2f4b7c",
+    "cornerRadius": 12
+   },
    "data": {
     "values": [
      {
-      "a": 1.9,
-      "b": 5.1,
-      "c": -0.42,
-      "d": -0.13,
-      "t": "INFLATION BY MAIN GROUP",
-      "m": 3.5,
-      "n": -0.275
+      "x": 0,
+      "y": 0,
+      "t": "Chart 3  Malaysia Inflation, Core Inflation and"
+     },
+     {
+      "x": 0,
+      "y": 1,
+      "t": "              Inflation without Fuel,"
+     },
+     {
+      "x": 0,
+      "y": 2,
+      "t": "              October 2024 \u2013 October 2025"
      }
     ]
    },
-   "transform": [],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "color": "white",
+    "fontSize": 16,
+    "fontWeight": "bold",
+    "fontStyle": "italic",
+    "dx": 12
+   },
+   "encoding": {
+    "x": {
+     "field": "x",
+     "type": "quantitative",
+     "axis": null,
+     "scale": {
+      "domain": [
+       0,
+       1
+      ]
+     }
+    },
+    "y": {
+     "field": "y",
+     "type": "ordinal",
+     "axis": null
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  },
+  {
+   "width": 400,
+   "height": 200,
+   "data": {
+    "values": [
+     {
+      "month": "2024-10-01",
+      "series": "Headline Inflation",
+      "value": 1.9,
+      "last": false
+     },
+     {
+      "month": "2024-10-01",
+      "series": "Core Inflation",
+      "value": 1.8,
+      "last": false
+     },
+     {
+      "month": "2024-10-01",
+      "series": "Inflation without Fuel",
+      "value": 1.9,
+      "last": false
+     },
+     {
+      "month": "2024-11-01",
+      "series": "Headline Inflation",
+      "value": 1.8,
+      "last": false
+     },
+     {
+      "month": "2024-11-01",
+      "series": "Core Inflation",
+      "value": 1.8,
+      "last": false
+     },
+     {
+      "month": "2024-11-01",
+      "series": "Inflation without Fuel",
+      "value": 1.9,
+      "last": false
+     },
+     {
+      "month": "2024-12-01",
+      "series": "Headline Inflation",
+      "value": 1.7,
+      "last": false
+     },
+     {
+      "month": "2024-12-01",
+      "series": "Core Inflation",
+      "value": 1.6,
+      "last": false
+     },
+     {
+      "month": "2024-12-01",
+      "series": "Inflation without Fuel",
+      "value": 1.7,
+      "last": false
+     },
+     {
+      "month": "2025-01-01",
+      "series": "Headline Inflation",
+      "value": 1.7,
+      "last": false
+     },
+     {
+      "month": "2025-01-01",
+      "series": "Core Inflation",
+      "value": 1.8,
+      "last": false
+     },
+     {
+      "month": "2025-01-01",
+      "series": "Inflation without Fuel",
+      "value": 1.8,
+      "last": false
+     },
+     {
+      "month": "2025-02-01",
+      "series": "Headline Inflation",
+      "value": 1.5,
+      "last": false
+     },
+     {
+      "month": "2025-02-01",
+      "series": "Core Inflation",
+      "value": 1.9,
+      "last": false
+     },
+     {
+      "month": "2025-02-01",
+      "series": "Inflation without Fuel",
+      "value": 1.6,
+      "last": false
+     },
+     {
+      "month": "2025-03-01",
+      "series": "Headline Inflation",
+      "value": 1.4,
+      "last": false
+     },
+     {
+      "month": "2025-03-01",
+      "series": "Core Inflation",
+      "value": 1.9,
+      "last": false
+     },
+     {
+      "month": "2025-03-01",
+      "series": "Inflation without Fuel",
+      "value": 1.5,
+      "last": false
+     },
+     {
+      "month": "2025-04-01",
+      "series": "Headline Inflation",
+      "value": 1.4,
+      "last": false
+     },
+     {
+      "month": "2025-04-01",
+      "series": "Core Inflation",
+      "value": 2.0,
+      "last": false
+     },
+     {
+      "month": "2025-04-01",
+      "series": "Inflation without Fuel",
+      "value": 1.5,
+      "last": false
+     },
+     {
+      "month": "2025-05-01",
+      "series": "Headline Inflation",
+      "value": 1.2,
+      "last": false
+     },
+     {
+      "month": "2025-05-01",
+      "series": "Core Inflation",
+      "value": 1.8,
+      "last": false
+     },
+     {
+      "month": "2025-05-01",
+      "series": "Inflation without Fuel",
+      "value": 1.4,
+      "last": false
+     },
+     {
+      "month": "2025-06-01",
+      "series": "Headline Inflation",
+      "value": 1.1,
+      "last": false
+     },
+     {
+      "month": "2025-06-01",
+      "series": "Core Inflation",
+      "value": 1.8,
+      "last": false
+     },
+     {
+      "month": "2025-06-01",
+      "series": "Inflation without Fuel",
+      "value": 1.3,
+      "last": false
+     },
+     {
+      "month": "2025-07-01",
+      "series": "Headline Inflation",
+      "value": 1.2,
+      "last": false
+     },
+     {
+      "month": "2025-07-01",
+      "series": "Core Inflation",
+      "value": 1.8,
+      "last": false
+     },
+     {
+      "month": "2025-07-01",
+      "series": "Inflation without Fuel",
+      "value": 1.3,
+      "last": false
+     },
+     {
+      "month": "2025-08-01",
+      "series": "Headline Inflation",
+      "value": 1.3,
+      "last": false
+     },
+     {
+      "month": "2025-08-01",
+      "series": "Core Inflation",
+      "value": 2.0,
+      "last": false
+     },
+     {
+      "month": "2025-08-01",
+      "series": "Inflation without Fuel",
+      "value": 1.4,
+      "last": false
+     },
+     {
+      "month": "2025-09-01",
+      "series": "Headline Inflation",
+      "value": 1.5,
+      "last": false
+     },
+     {
+      "month": "2025-09-01",
+      "series": "Core Inflation",
+      "value": 2.1,
+      "last": false
+     },
+     {
+      "month": "2025-09-01",
+      "series": "Inflation without Fuel",
+      "value": 1.6,
+      "last": false
+     },
+     {
+      "month": "2025-10-01",
+      "series": "Headline Inflation",
+      "value": 1.3,
+      "last": true
+     },
+     {
+      "month": "2025-10-01",
+      "series": "Core Inflation",
+      "value": 2.2,
+      "last": true
+     },
+     {
+      "month": "2025-10-01",
+      "series": "Inflation without Fuel",
+      "value": 1.5,
+      "last": true
+     }
+    ]
+   },
+   "encoding": {
+    "x": {
+     "field": "month",
+     "type": "ordinal",
+     "timeUnit": "yearmonth",
+     "title": null,
+     "axis": {
+      "format": "%b-%y",
+      "labelAngle": -90,
+      "labelFontSize": 12,
+      "labelFontStyle": "italic",
+      "labelFontWeight": "bold",
+      "domain": false,
+      "ticks": true,
+      "grid": false,
+      "labelPadding": 6
+     }
+    },
+    "y": {
+     "field": "value",
+     "type": "quantitative",
+     "title": "%",
+     "scale": {
+      "domain": [
+       0,
+       4
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       2,
+       4
+      ],
+      "format": ".1f",
+      "titleAngle": 0,
+      "titleY": -12,
+      "titleX": -10,
+      "titleFontSize": 13,
+      "titleFontWeight": "normal",
+      "labelFontSize": 12,
+      "labelFontStyle": "italic",
+      "labelFontWeight": "bold",
+      "grid": true,
+      "gridColor": "#bbbbbb",
+      "domain": true,
+      "domainColor": "#888"
+     }
+    },
+    "color": {
+     "field": "series",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Headline Inflation",
+       "Core Inflation",
+       "Inflation without Fuel"
+      ],
+      "range": [
+       "#4a74c9",
+       "#c49a2c",
+       "#333333"
+      ]
+     },
+     "legend": {
+      "title": null,
+      "orient": "bottom",
+      "columns": 2,
+      "labelFontStyle": "italic",
+      "labelFontSize": 12,
+      "symbolType": "stroke",
+      "symbolStrokeWidth": 4,
+      "columnPadding": 30
+     }
+    }
+   },
    "layer": [
     {
      "mark": {
-      "type": "rect",
-      "color": "#7a1f4c",
-      "cornerRadius": 16
-     },
-     "encoding": {
-      "x": {
-       "field": "a",
-       "type": "quantitative",
-       "scale": {
-        "domain": [
-         0,
-         7
-        ]
-       },
-       "axis": null
-      },
-      "y": {
-       "field": "c",
-       "type": "quantitative",
-       "scale": {
-        "domain": [
-         -0.45,
-         2.25
-        ],
-        "reverse": true
-       },
-       "axis": null
-      },
-      "x2": {
-       "field": "b"
-      },
-      "y2": {
-       "field": "d"
+      "type": "line",
+      "strokeWidth": 3.5,
+      "point": {
+       "filled": false,
+       "fill": "white",
+       "size": 40,
+       "strokeWidth": 3
       }
      }
     },
     {
+     "transform": [
+      {
+       "filter": "datum.last"
+      },
+      {
+       "calculate": "datum.series=='Inflation without Fuel' ? datum.value+0.12 : (datum.series=='Headline Inflation' ? datum.value-0.08 : datum.value+0.04)",
+       "as": "laby"
+      }
+     ],
+     "mark": {
+      "type": "rect",
+      "width": 30,
+      "height": 22,
+      "xOffset": 34
+     },
+     "encoding": {
+      "x": {
+       "field": "month",
+       "type": "ordinal",
+       "timeUnit": "yearmonth"
+      },
+      "y": {
+       "field": "laby",
+       "type": "quantitative"
+      }
+     }
+    },
+    {
+     "transform": [
+      {
+       "filter": "datum.last"
+      },
+      {
+       "calculate": "datum.series=='Inflation without Fuel' ? datum.value+0.12 : (datum.series=='Headline Inflation' ? datum.value-0.08 : datum.value+0.04)",
+       "as": "laby"
+      }
+     ],
      "mark": {
       "type": "text",
       "color": "white",
       "fontWeight": "bold",
-      "fontSize": 17
+      "fontSize": 14,
+      "fontStyle": "italic",
+      "xOffset": 34
      },
      "encoding": {
       "x": {
-       "field": "m",
-       "type": "quantitative",
-       "scale": {
-        "domain": [
-         0,
-         7
-        ]
-       },
-       "axis": null
+       "field": "month",
+       "type": "ordinal",
+       "timeUnit": "yearmonth"
       },
       "y": {
-       "field": "n",
-       "type": "quantitative",
-       "scale": {
-        "domain": [
-         -0.45,
-         2.25
-        ],
-        "reverse": true
-       },
-       "axis": null
+       "field": "laby",
+       "type": "quantitative"
       },
       "text": {
-       "field": "t"
+       "field": "value",
+       "type": "quantitative",
+       "format": ".1f"
+      },
+      "color": {
+       "value": "white"
       }
      }
     }
    ]
-  },
-  {
-   "mark": {
-    "type": "rect",
-    "color": "#d9d0ea",
-    "cornerRadius": 8
-   },
-   "encoding": {
-    "x": {
-     "field": "tx1",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       0,
-       7
-      ]
-     },
-     "axis": null
-    },
-    "y": {
-     "field": "ty1",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       -0.45,
-       2.25
-      ],
-      "reverse": true
-     },
-     "axis": null
-    },
-    "x2": {
-     "field": "tx2"
-    },
-    "y2": {
-     "field": "ty2"
-    }
-   }
-  },
-  {
-   "mark": {
-    "type": "circle",
-    "size": 1300,
-    "color": "white",
-    "stroke": "#7a1f4c",
-    "strokeWidth": 5,
-    "opacity": 1
-   },
-   "encoding": {
-    "x": {
-     "field": "cx",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       0,
-       7
-      ]
-     },
-     "axis": null
-    },
-    "y": {
-     "field": "iy",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       -0.45,
-       2.25
-      ],
-      "reverse": true
-     },
-     "axis": null
-    }
-   }
-  },
-  {
-   "mark": {
-    "type": "text",
-    "fontSize": 9.5,
-    "lineBreak": "\n",
-    "color": "#222",
-    "align": "center",
-    "baseline": "middle",
-    "lineHeight": 11
-   },
-   "encoding": {
-    "x": {
-     "field": "cx",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       0,
-       7
-      ]
-     },
-     "axis": null
-    },
-    "y": {
-     "field": "ly",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       -0.45,
-       2.25
-      ],
-      "reverse": true
-     },
-     "axis": null
-    },
-    "text": {
-     "field": "label"
-    }
-   }
-  },
-  {
-   "mark": {
-    "type": "rect",
-    "color": "#7a1f4c"
-   },
-   "encoding": {
-    "x": {
-     "field": "dx1",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       0,
-       7
-      ]
-     },
-     "axis": null
-    },
-    "y": {
-     "field": "by1",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       -0.45,
-       2.25
-      ],
-      "reverse": true
-     },
-     "axis": null
-    },
-    "x2": {
-     "field": "dx2"
-    },
-    "y2": {
-     "field": "by2"
-    }
-   }
-  },
-  {
-   "mark": {
-    "type": "rect",
-    "color": "#2b3590"
-   },
-   "encoding": {
-    "x": {
-     "field": "jx1",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       0,
-       7
-      ]
-     },
-     "axis": null
-    },
-    "y": {
-     "field": "by1",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       -0.45,
-       2.25
-      ],
-      "reverse": true
-     },
-     "axis": null
-    },
-    "x2": {
-     "field": "jx2"
-    },
-    "y2": {
-     "field": "by2"
-    }
-   }
-  },
-  {
-   "mark": {
-    "type": "text",
-    "color": "white",
-    "fontWeight": "bold",
-    "fontSize": 13
-   },
-   "encoding": {
-    "x": {
-     "field": "dxc",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       0,
-       7
-      ]
-     },
-     "axis": null
-    },
-    "y": {
-     "field": "byc",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       -0.45,
-       2.25
-      ],
-      "reverse": true
-     },
-     "axis": null
-    },
-    "text": {
-     "field": "dec_t"
-    }
-   }
-  },
-  {
-   "mark": {
-    "type": "text",
-    "color": "white",
-    "fontWeight": "bold",
-    "fontSize": 13
-   },
-   "encoding": {
-    "x": {
-     "field": "jxc",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       0,
-       7
-      ]
-     },
-     "axis": null
-    },
-    "y": {
-     "field": "byc",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       -0.45,
-       2.25
-      ],
-      "reverse": true
-     },
-     "axis": null
-    },
-    "text": {
-     "field": "jan_t"
-    }
-   }
-  },
-  {
-   "data": {
-    "values": [
-     {
-      "x": 6.95,
-      "y": 2.12,
-      "t": "Source: Consumer Price Index, Department of Statistics Malaysia"
-     }
-    ]
-   },
-   "transform": [],
-   "mark": {
-    "type": "text",
-    "align": "right",
-    "fontSize": 10,
-    "color": "#333"
-   },
-   "encoding": {
-    "x": {
-     "field": "x",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       0,
-       7
-      ]
-     },
-     "axis": null
-    },
-    "y": {
-     "field": "y",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       -0.45,
-       2.25
-      ],
-      "reverse": true
-     },
-     "axis": null
-    },
-    "text": {
-     "field": "t"
-    }
-   }
-  },
-  {
-   "data": {
-    "values": [
-     {
-      "x": 0.05,
-      "y": 2.12,
-      "t": "Note:"
-     }
-    ]
-   },
-   "transform": [],
-   "mark": {
-    "type": "text",
-    "align": "left",
-    "fontSize": 10,
-    "color": "#333",
-    "fontWeight": "normal"
-   },
-   "encoding": {
-    "x": {
-     "field": "x",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       0,
-       7
-      ]
-     },
-     "axis": null
-    },
-    "y": {
-     "field": "y",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       -0.45,
-       2.25
-      ],
-      "reverse": true
-     },
-     "axis": null
-    },
-    "text": {
-     "field": "t"
-    }
-   }
-  },
-  {
-   "data": {
-    "values": [
-     {
-      "x": 0.33,
-      "y": 2.12,
-      "t": "\u25a0 December 2024"
-     }
-    ]
-   },
-   "transform": [],
-   "mark": {
-    "type": "text",
-    "align": "left",
-    "fontSize": 10,
-    "color": "#7a1f4c",
-    "fontWeight": "bold"
-   },
-   "encoding": {
-    "x": {
-     "field": "x",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       0,
-       7
-      ]
-     },
-     "axis": null
-    },
-    "y": {
-     "field": "y",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       -0.45,
-       2.25
-      ],
-      "reverse": true
-     },
-     "axis": null
-    },
-    "text": {
-     "field": "t"
-    }
-   }
-  },
-  {
-   "data": {
-    "values": [
-     {
-      "x": 1.15,
-      "y": 2.12,
-      "t": "\u25a0 January 2025"
-     }
-    ]
-   },
-   "transform": [],
-   "mark": {
-    "type": "text",
-    "align": "left",
-    "fontSize": 10,
-    "color": "#2b3590",
-    "fontWeight": "bold"
-   },
-   "encoding": {
-    "x": {
-     "field": "x",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       0,
-       7
-      ]
-     },
-     "axis": null
-    },
-    "y": {
-     "field": "y",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       -0.45,
-       2.25
-      ],
-      "reverse": true
-     },
-     "axis": null
-    },
-    "text": {
-     "field": "t"
-    }
-   }
-  },
-  {
-   "data": {
-    "values": [
-     {
-      "x": 1.95,
-      "y": 2.12,
-      "t": "Percentage change: Year-on-Year"
-     }
-    ]
-   },
-   "transform": [],
-   "mark": {
-    "type": "text",
-    "align": "left",
-    "fontSize": 10,
-    "color": "#333",
-    "fontWeight": "normal"
-   },
-   "encoding": {
-    "x": {
-     "field": "x",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       0,
-       7
-      ]
-     },
-     "axis": null
-    },
-    "y": {
-     "field": "y",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       -0.45,
-       2.25
-      ],
-      "reverse": true
-     },
-     "axis": null
-    },
-    "text": {
-     "field": "t"
-    }
-   }
   }
  ]
 }
