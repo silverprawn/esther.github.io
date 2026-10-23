@@ -1,0 +1,284 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "Improved version: inflation by main group, January 2025 vs December 2024, Malaysia",
+ "title": {
+  "text": "Eating out and personal care pushed prices up; phone and internet costs fell",
+  "subtitle": [
+   "Inflation by main spending group, January 2025 (bars) and December 2024 (black ticks). % change on a year earlier.",
+   "Dashed line = headline inflation (1.7%). Source: Department of Statistics Malaysia, Consumer Price Index, January 2025"
+  ],
+  "anchor": "start",
+  "fontSize": 15,
+  "subtitleFontSize": 11,
+  "subtitleColor": "#555"
+ },
+ "width": 480,
+ "height": 360,
+ "config": {
+  "view": {
+   "stroke": null
+  },
+  "axis": {
+   "labelFontSize": 11
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "group": "Food & beverages",
+    "dec": 2.7,
+    "jan": 2.5
+   },
+   {
+    "group": "Alcohol & tobacco",
+    "dec": 0.8,
+    "jan": 0.9
+   },
+   {
+    "group": "Clothing & footwear",
+    "dec": -0.5,
+    "jan": -0.3
+   },
+   {
+    "group": "Housing & utilities",
+    "dec": 3.2,
+    "jan": 2.8
+   },
+   {
+    "group": "Furnishings & household",
+    "dec": 0.4,
+    "jan": 0.5
+   },
+   {
+    "group": "Health",
+    "dec": 1.1,
+    "jan": 1.2
+   },
+   {
+    "group": "Transport",
+    "dec": 0.4,
+    "jan": 0.9
+   },
+   {
+    "group": "Information & communication",
+    "dec": -5.4,
+    "jan": -5.3
+   },
+   {
+    "group": "Recreation & culture",
+    "dec": 1.7,
+    "jan": 1.8
+   },
+   {
+    "group": "Education",
+    "dec": 1.5,
+    "jan": 1.6
+   },
+   {
+    "group": "Restaurants & hotels",
+    "dec": 2.9,
+    "jan": 3.5
+   },
+   {
+    "group": "Insurance & financial",
+    "dec": 0.5,
+    "jan": 0.6
+   },
+   {
+    "group": "Personal care & other",
+    "dec": 3.2,
+    "jan": 3.3
+   }
+  ]
+ },
+ "transform": [
+  {
+   "calculate": "datum.jan >= 1.7 ? 'Above headline' : 'Below headline'",
+   "as": "band"
+  },
+  {
+   "calculate": "datum.jan >= 0 ? max(datum.jan, datum.dec) : min(datum.jan, datum.dec)",
+   "as": "labx"
+  }
+ ],
+ "encoding": {
+  "y": {
+   "field": "group",
+   "type": "nominal",
+   "sort": {
+    "field": "jan",
+    "op": "max",
+    "order": "descending"
+   },
+   "title": null,
+   "axis": {
+    "ticks": false,
+    "domain": false
+   }
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "height": {
+     "band": 0.7
+    }
+   },
+   "encoding": {
+    "x": {
+     "field": "jan",
+     "type": "quantitative",
+     "title": "% change on a year earlier",
+     "scale": {
+      "domain": [
+       -7,
+       4
+      ]
+     },
+     "axis": {
+      "grid": false,
+      "format": ".0f"
+     }
+    },
+    "color": {
+     "field": "band",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Above headline",
+       "Below headline"
+      ],
+      "range": [
+       "#2b3590",
+       "#a9b0d6"
+      ]
+     },
+     "legend": null
+    },
+    "tooltip": [
+     {
+      "field": "group",
+      "title": "Group"
+     },
+     {
+      "field": "jan",
+      "title": "Jan 2025 (%)"
+     },
+     {
+      "field": "dec",
+      "title": "Dec 2024 (%)"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "tick",
+    "color": "black",
+    "thickness": 2,
+    "bandSize": 14
+   },
+   "encoding": {
+    "x": {
+     "field": "dec",
+     "type": "quantitative"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 6,
+    "fontSize": 10,
+    "color": "#222"
+   },
+   "transform": [
+    {
+     "filter": "datum.jan >= 0"
+    }
+   ],
+   "encoding": {
+    "x": {
+     "field": "labx",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "jan",
+     "type": "quantitative",
+     "format": ".1f"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -6,
+    "fontSize": 10,
+    "color": "#222"
+   },
+   "transform": [
+    {
+     "filter": "datum.jan < 0"
+    }
+   ],
+   "encoding": {
+    "x": {
+     "field": "labx",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "jan",
+     "type": "quantitative",
+     "format": ".1f"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "h": 1.7
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "strokeDash": [
+     4,
+     3
+    ],
+    "color": "#7a1f4c"
+   },
+   "encoding": {
+    "x": {
+     "field": "h",
+     "type": "quantitative"
+    },
+    "y": null
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "z": 0
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "color": "#444"
+   },
+   "encoding": {
+    "x": {
+     "field": "z",
+     "type": "quantitative"
+    },
+    "y": null
+   }
+  }
+ ]
+}
