@@ -308,11 +308,11 @@
    "axis": {
     "format": "%b %Y",
            "values": [
-        {"year": 2024, "month": 10, "date": 1},
-        {"year": 2025, "month": 1, "date": 1},
-        {"year": 2025, "month": 4, "date": 1},
-        {"year": 2025, "month": 7, "date": 1},
-        {"year": 2025, "month": 10, "date": 1}
+               {"year": 2024, "month": 10, "date": 1, "utc": true},
+        {"year": 2025, "month": 1, "date": 1, "utc": true},
+        {"year": 2025, "month": 4, "date": 1, "utc": true},
+        {"year": 2025, "month": 7, "date": 1, "utc": true},
+        {"year": 2025, "month": 10, "date": 1, "utc": true}
        ],
     "grid": false,
     "labelAngle": 0
