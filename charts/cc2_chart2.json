@@ -3,7 +3,7 @@
   "title": {
            "text": "China's average urban wage is 13 times higher than in 2000",
     "anchor": "start",
-           "subtitle": "Average annual wage, urban workers, nominal CNY | Source: NBS via ECO API",
+                "subtitle": ["Average annual wage, urban workers, nominal CNY", "Source: NBS via ECO API"],
     "fontSize": "14",
     "subtitleFontSize": "12",
     "color": "#000000",
