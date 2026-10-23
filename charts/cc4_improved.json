@@ -307,10 +307,13 @@
    "title": null,
    "axis": {
     "format": "%b %Y",
-    "tickCount": {
-     "interval": "month",
-     "step": 3
-    },
+           "values": [
+        {"year": 2024, "month": 10, "date": 1},
+        {"year": 2025, "month": 1, "date": 1},
+        {"year": 2025, "month": 4, "date": 1},
+        {"year": 2025, "month": 7, "date": 1},
+        {"year": 2025, "month": 10, "date": 1}
+       ],
     "grid": false,
     "labelAngle": 0
    }
