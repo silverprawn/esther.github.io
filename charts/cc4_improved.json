@@ -2,7 +2,7 @@
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Improved version: inflation by main group, January 2025 vs December 2024, Malaysia",
  "title": {
-  "text": "Eating out and personal care pushed prices up; phone and internet costs fell",
+       "text": "Restaurants and hotels had the highest inflation; information and communication prices fell",
   "subtitle": [
    "Inflation by main spending group, January 2025 (bars) and December 2024 (black ticks). % change on a year earlier.",
    "Dashed line = headline inflation (1.7%). Source: Department of Statistics Malaysia, Consumer Price Index, January 2025"
