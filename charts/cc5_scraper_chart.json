@@ -1,0 +1,173 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "GDP per capita by Malaysian state, 2015-2025, scraped from Wikipedia",
+ "title": {
+  "text": "Kuala Lumpur's output per person is about eight times Kelantan's",
+  "subtitle": [
+   "GDP per capita by state, nominal ringgit (RM), 2015\u20132025. Grey lines = other states.",
+   "Kuala Lumpur includes Putrajaya until 2023. Source: DOSM via Wikipedia (scraped with Python)"
+  ],
+  "anchor": "start",
+  "fontSize": 15,
+  "subtitleFontSize": 11,
+  "subtitleColor": "#555"
+ },
+ "width": 460,
+ "height": 300,
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "url": "https://raw.githubusercontent.com/silverprawn/silverprawn.github.io/main/cc5_malaysia_gdp_per_capita_tidy.csv"
+ },
+ "transform": [
+  {
+   "calculate": "indexof(['Kuala Lumpur','Malaysia','Kelantan'], datum.state) >= 0 ? datum.state : 'Other states'",
+   "as": "group"
+  }
+ ],
+ "encoding": {
+  "x": {
+   "field": "year",
+   "type": "quantitative",
+   "title": null,
+   "axis": {
+    "format": "d",
+    "grid": false,
+    "tickCount": 6
+   }
+  },
+  "y": {
+   "field": "gdp_pc_rm",
+   "type": "quantitative",
+   "title": null,
+   "axis": {
+    "labelExpr": "'RM' + format(datum.value/1000,',') + 'k'",
+    "domain": false,
+    "ticks": false,
+    "gridColor": "#e5e5e5"
+   }
+  }
+ },
+ "layer": [
+  {
+   "transform": [
+    {
+     "filter": "datum.group == 'Other states'"
+    }
+   ],
+   "mark": {
+    "type": "line",
+    "color": "#c8c8c8",
+    "strokeWidth": 1.2
+   },
+   "encoding": {
+    "detail": {
+     "field": "state"
+    },
+    "tooltip": [
+     {
+      "field": "state",
+      "title": "State"
+     },
+     {
+      "field": "year",
+      "title": "Year"
+     },
+     {
+      "field": "gdp_pc_rm",
+      "format": ",",
+      "title": "GDP per capita (RM)"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.group != 'Other states'"
+    }
+   ],
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.8
+   },
+   "encoding": {
+    "color": {
+     "field": "group",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Kuala Lumpur",
+       "Malaysia",
+       "Kelantan"
+      ],
+      "range": [
+       "#1f4e9c",
+       "#222222",
+       "#c0392b"
+      ]
+     },
+     "legend": null
+    },
+    "tooltip": [
+     {
+      "field": "state",
+      "title": "State"
+     },
+     {
+      "field": "year",
+      "title": "Year"
+     },
+     {
+      "field": "gdp_pc_rm",
+      "format": ",",
+      "title": "GDP per capita (RM)"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.group != 'Other states' && datum.year == 2025"
+    },
+    {
+     "calculate": "datum.state + ' RM' + format(datum.gdp_pc_rm/1000,'.0f') + 'k'",
+     "as": "lab"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 6,
+    "fontSize": 11,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "text": {
+     "field": "lab"
+    },
+    "color": {
+     "field": "group",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Kuala Lumpur",
+       "Malaysia",
+       "Kelantan"
+      ],
+      "range": [
+       "#1f4e9c",
+       "#222222",
+       "#c0392b"
+      ]
+     },
+     "legend": null
+    }
+   }
+  }
+ ]
+}

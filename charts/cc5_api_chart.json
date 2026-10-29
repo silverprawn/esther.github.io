@@ -1,0 +1,112 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "Live chart: fertility rates in four Southeast Asian countries, from the World Bank Indicators API",
+ "title": {
+  "text": "Fertility has fallen across Southeast Asia since the 1960s",
+  "subtitle": [
+   "Total fertility rate (births per woman). Dashed grey line = replacement level (2.1).",
+   "Source: World Bank Indicators API (SP.DYN.TFRT.IN), live link"
+  ],
+  "anchor": "start",
+  "fontSize": 15,
+  "subtitleFontSize": 11,
+  "subtitleColor": "#555"
+ },
+ "width": 460,
+ "height": 280,
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "url": "https://api.worldbank.org/v2/country/mys;sgp;tha;idn/indicator/SP.DYN.TFRT.IN?format=json&per_page=1000",
+  "format": {
+   "type": "json",
+   "property": "1"
+  }
+ },
+ "transform": [
+  {
+   "filter": "datum.value != null"
+  }
+ ],
+ "layer": [
+  {
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.2
+   },
+   "encoding": {
+    "x": {
+     "field": "date",
+     "type": "temporal",
+     "title": null,
+     "axis": {
+      "format": "%Y",
+      "grid": false
+     }
+    },
+    "y": {
+     "field": "value",
+     "type": "quantitative",
+     "title": "Births per woman",
+     "axis": {
+      "gridColor": "#e5e5e5"
+     }
+    },
+    "color": {
+     "field": "country.value",
+     "type": "nominal",
+     "title": "Country",
+     "scale": {
+      "scheme": "tableau10"
+     }
+    },
+    "strokeDash": {
+     "field": "country.value",
+     "type": "nominal",
+     "title": "Country"
+    },
+    "tooltip": [
+     {
+      "field": "country.value",
+      "title": "Country"
+     },
+     {
+      "field": "date",
+      "title": "Year"
+     },
+     {
+      "field": "value",
+      "title": "Births per woman",
+      "format": ".2f"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "r": 2.1
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "strokeDash": [
+     4,
+     3
+    ],
+    "color": "#888"
+   },
+   "encoding": {
+    "y": {
+     "field": "r",
+     "type": "quantitative"
+    }
+   }
+  }
+ ]
+}
