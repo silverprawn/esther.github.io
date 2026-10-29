@@ -1,0 +1,179 @@
+state,year,gdp_pc_rm,gdp_pc_usd,is_national
+Johor,2015,29539.0,7554.0,False
+Johor,2016,31952.0,7699.0,False
+Johor,2017,34362.0,7991.0,False
+Johor,2018,36394.0,9008.0,False
+Johor,2019,37342.0,9020.0,False
+Johor,2020,33896.0,8070.0,False
+Johor,2021,36474.0,8810.0,False
+Johor,2022,41058.0,9331.0,False
+Johor,2023,41902.0,9189.0,False
+Johor,2024,44762.0,9773.0,False
+Johor,2025,48031.0,11222.0,False
+Kedah,2015,18249.0,4667.0,False
+Kedah,2016,19152.0,4614.0,False
+Kedah,2017,20327.0,4727.0,False
+Kedah,2018,21410.0,5299.0,False
+Kedah,2019,22412.0,5414.0,False
+Kedah,2020,22693.0,5402.0,False
+Kedah,2021,23575.0,5694.0,False
+Kedah,2022,25967.0,5902.0,False
+Kedah,2023,26353.0,5779.0,False
+Kedah,2024,27268.0,5954.0,False
+Kedah,2025,28537.0,6668.0,False
+Kelantan,2015,12075.0,3088.0,False
+Kelantan,2016,12812.0,3087.0,False
+Kelantan,2017,13593.0,3161.0,False
+Kelantan,2018,13668.0,3383.0,False
+Kelantan,2019,14341.0,3464.0,False
+Kelantan,2020,14951.0,3559.0,False
+Kelantan,2021,15584.0,3764.0,False
+Kelantan,2022,16567.0,3765.0,False
+Kelantan,2023,16836.0,3692.0,False
+Kelantan,2024,17368.0,3792.0,False
+Kelantan,2025,18085.0,4225.0,False
+Kuala Lumpur,2015,94722.0,24225.0,False
+Kuala Lumpur,2016,101420.0,24438.0,False
+Kuala Lumpur,2017,111321.0,25888.0,False
+Kuala Lumpur,2018,121293.0,30023.0,False
+Kuala Lumpur,2019,129472.0,31273.0,False
+Kuala Lumpur,2020,121100.0,28833.0,False
+Kuala Lumpur,2021,111292.0,26882.0,False
+Kuala Lumpur,2022,127199.0,28909.0,False
+Kuala Lumpur,2023,131038.0,28736.0,False
+Kuala Lumpur,2024,136365.0,29774.0,False
+Kuala Lumpur,2025,144898.0,33831.0,False
+Labuan,2015,58577.0,14981.0,False
+Labuan,2016,61833.0,14899.0,False
+Labuan,2017,65949.0,15336.0,False
+Labuan,2018,74337.0,18400.0,False
+Labuan,2019,77798.0,18791.0,False
+Labuan,2020,76898.0,18309.0,False
+Labuan,2021,81345.0,19648.0,False
+Labuan,2022,81652.0,18557.0,False
+Labuan,2023,83596.0,18332.0,False
+Labuan,2024,87003.0,18996.0,False
+Labuan,2025,88764.0,20739.0,False
+Malacca,2015,39853.0,10192.0,False
+Malacca,2016,41363.0,9966.0,False
+Malacca,2017,46015.0,10701.0,False
+Malacca,2018,47960.0,11871.0,False
+Malacca,2019,49172.0,11877.0,False
+Malacca,2020,42861.0,10205.0,False
+Malacca,2021,44610.0,10775.0,False
+Malacca,2022,50407.0,11456.0,False
+Malacca,2023,53922.0,11825.0,False
+Malacca,2024,54553.0,11911.0,False
+Malacca,2025,55580.0,12986.0,False
+Malaysia,2015,37104.0,9489.0,True
+Malaysia,2016,38887.0,9370.0,True
+Malaysia,2017,42228.0,9820.0,True
+Malaysia,2018,44682.0,11059.0,True
+Malaysia,2019,46450.0,11219.0,True
+Malaysia,2020,43475.0,10351.0,True
+Malaysia,2021,47439.0,11458.0,True
+Malaysia,2022,54863.0,12469.0,True
+Malaysia,2023,54612.0,11976.0,True
+Malaysia,2024,56734.0,12387.0,True
+Malaysia,2025,59167.0,13824.0,True
+Negeri Sembilan,2015,36699.0,9385.0,False
+Negeri Sembilan,2016,38559.0,9291.0,False
+Negeri Sembilan,2017,41615.0,9677.0,False
+Negeri Sembilan,2018,43047.0,10655.0,False
+Negeri Sembilan,2019,45373.0,10960.0,False
+Negeri Sembilan,2020,41254.0,9822.0,False
+Negeri Sembilan,2021,44495.0,10747.0,False
+Negeri Sembilan,2022,49804.0,11319.0,False
+Negeri Sembilan,2023,51709.0,11340.0,False
+Negeri Sembilan,2024,53928.0,11775.0,False
+Negeri Sembilan,2025,55406.0,12945.0,False
+Pahang,2015,30343.0,7760.0,False
+Pahang,2016,36244.0,8733.0,False
+Pahang,2017,38952.0,9058.0,False
+Pahang,2018,35577.0,8806.0,False
+Pahang,2019,36560.0,8831.0,False
+Pahang,2020,38010.0,9050.0,False
+Pahang,2021,41313.0,9978.0,False
+Pahang,2022,47177.0,10722.0,False
+Pahang,2023,46084.0,10106.0,False
+Pahang,2024,49617.0,10833.0,False
+Pahang,2025,52014.0,12153.0,False
+Penang,2015,44847.0,11469.0,False
+Penang,2016,47322.0,11402.0,False
+Penang,2017,49873.0,11598.0,False
+Penang,2018,52397.0,12969.0,False
+Penang,2019,55243.0,13344.0,False
+Penang,2020,55774.0,13279.0,False
+Penang,2021,59685.0,14416.0,False
+Penang,2022,69684.0,15837.0,False
+Penang,2023,72586.0,15918.0,False
+Penang,2024,76033.0,16601.0,False
+Penang,2025,80584.0,18828.0,False
+Perak,2015,25418.0,6500.0,False
+Perak,2016,27246.0,6565.0,False
+Perak,2017,29226.0,6796.0,False
+Perak,2018,30303.0,7500.0,False
+Perak,2019,31719.0,7662.0,False
+Perak,2020,31626.0,7530.0,False
+Perak,2021,34338.0,8294.0,False
+Perak,2022,36924.0,8391.0,False
+Perak,2023,37170.0,8151.0,False
+Perak,2024,38996.0,8514.0,False
+Perak,2025,41960.0,9804.0,False
+Perlis,2015,21394.0,5471.0,False
+Perlis,2016,22479.0,5416.0,False
+Perlis,2017,23372.0,5435.0,False
+Perlis,2018,24442.0,6050.0,False
+Perlis,2019,25656.0,6197.0,False
+Perlis,2020,21099.0,5023.0,False
+Perlis,2021,21508.0,5195.0,False
+Perlis,2022,23126.0,5256.0,False
+Perlis,2023,24004.0,5264.0,False
+Perlis,2024,24695.0,5392.0,False
+Perlis,2025,25089.0,5862.0,False
+Putrajaya,2024,119498.0,26091.0,False
+Putrajaya,2025,126359.0,29523.0,False
+Sabah,2015,19734.0,5047.0,False
+Sabah,2016,21081.0,5079.0,False
+Sabah,2017,23979.0,5576.0,False
+Sabah,2018,25861.0,6401.0,False
+Sabah,2019,25326.0,6117.0,False
+Sabah,2020,24652.0,5869.0,False
+Sabah,2021,29960.0,7236.0,False
+Sabah,2022,36020.0,8186.0,False
+Sabah,2023,31147.0,6830.0,False
+Sabah,2024,30605.0,6682.0,False
+Sabah,2025,31125.0,7272.0,False
+Sarawak,2015,44012.0,11256.0,False
+Sarawak,2016,44333.0,10682.0,False
+Sarawak,2017,49327.0,11471.0,False
+Sarawak,2018,52301.0,12945.0,False
+Sarawak,2019,53358.0,12888.0,False
+Sarawak,2020,55931.0,13316.0,False
+Sarawak,2021,65971.0,15935.0,False
+Sarawak,2022,80857.0,18377.0,False
+Sarawak,2023,72411.0,15880.0,False
+Sarawak,2024,73426.0,16032.0,False
+Sarawak,2025,73757.0,17233.0,False
+Selangor,2015,42611.0,10897.0,False
+Selangor,2016,44616.0,10750.0,False
+Selangor,2017,48091.0,11183.0,False
+Selangor,2018,51528.0,12754.0,False
+Selangor,2019,54995.0,13284.0,False
+Selangor,2020,48607.0,11573.0,False
+Selangor,2021,51930.0,12543.0,False
+Selangor,2022,59908.0,13615.0,False
+Selangor,2023,62492.0,13704.0,False
+Selangor,2024,65907.0,14390.0,False
+Selangor,2025,70362.0,16440.0,False
+Terengganu,2015,26529.0,6784.0,False
+Terengganu,2016,27268.0,6570.0,False
+Terengganu,2017,29347.0,6971.0,False
+Terengganu,2018,30216.0,7479.0,False
+Terengganu,2019,30933.0,7472.0,False
+Terengganu,2020,29426.0,7006.0,False
+Terengganu,2021,30901.0,7464.0,False
+Terengganu,2022,32199.0,7318.0,False
+Terengganu,2023,31111.0,6823.0,False
+Terengganu,2024,32442.0,7083.0,False
+Terengganu,2025,32657.0,7630.0,False
