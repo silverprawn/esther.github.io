@@ -48,6 +48,36 @@
 
   <!-- YOUR explanation of the improvement (max 25 words) -->
   <p>Added a message title, direct labels and distinct colours and line styles; narrowed the y-axis range to make differences between inflation measures easier to see.</p>
+  
+  <!-- ========== CC5 ========== -->
+  <h2>CC5. Accessing data: (1) API, (2) Scraper</h2>
+
+  <h3>(1) API: a live chart</h3>
+  <div id="cc5_chart1"></div>
+
+  <h4>How the API works</h4>
+  <ul>
+    <li><strong>API:</strong> World Bank Indicators API (version 2). Free, no API key needed, and it allows browser requests (no CORS problem).</li>
+    <li><strong>Base URL:</strong> <code>https://api.worldbank.org/v2/country/{countries}/indicator/{indicator}</code></li>
+    <li><strong>Elements needed to call data:</strong>
+      <ul>
+        <li><code>{countries}</code>: ISO-3 country codes, joined with <code>;</code> (here <code>mys;sgp;tha;idn</code>).</li>
+        <li><code>{indicator}</code>: the series code from data.worldbank.org (here <code>SP.DYN.TFRT.IN</code>, total fertility rate).</li>
+        <li><code>?format=json</code>: return JSON instead of the default XML.</li>
+        <li><code>&amp;per_page=1000</code>: return all rows on one page (the default of 50 would cut off older years).</li>
+      </ul>
+    </li>
+    <li><strong>Data returned:</strong> JSON, nested as a list of two parts: <code>[metadata, data]</code>. The metadata gives page counts and the last update date; the data is one record per country-year with <code>date</code>, <code>value</code> and a nested <code>country.value</code> name. Within the data part it is tidy (long form). Vega-Lite reads it with <code>"format": {"property": "1"}</code>. Years without data are <code>null</code> and are filtered out.</li>
+    <li><strong>Full URL used:</strong> <code>https://api.worldbank.org/v2/country/mys;sgp;tha;idn/indicator/SP.DYN.TFRT.IN?format=json&amp;per_page=1000</code></li>
+  </ul>
+
+  <h3>(2) Scraper</h3>
+  <p>Notebook: <a href="PASTE_YOUR_COLAB_LINK_HERE">Google Colab notebook (scraping, cleaning and tidying)</a></p>
+  <div id="cc5_chart2"></div>
+  <p>WRITE YOUR COMMENT HERE</p>
+
+  <h2>AI use</h2>
+  <p>I used Claude (Anthropic) to help write and debug the HTML, Vega-Lite and Python code, draft the API description, transcribe data values from the DOSM chart (CC4), and check my texts against word limits. I reviewed AI-drafted example text but wrote the final topic, comments and explanations myself.</p>
   <script>
     // vegaEmbed("#which box", "which JSON file")
     vegaEmbed("#cc1_chart1", "charts/cc1_chart1.json");
@@ -58,6 +88,8 @@
     vegaEmbed("#cc3_chart2", "charts/cc3_chart2.json");
     vegaEmbed("#cc4_chart1", "charts/cc4_replica.json");
     vegaEmbed("#cc4_chart2", "charts/cc4_improved.json");
+    vegaEmbed("#cc5_chart1", "charts/cc5_api_chart.json");
+    vegaEmbed("#cc5_chart2", "charts/cc5_scraper_chart.json");
     
   </script>
 </body>
